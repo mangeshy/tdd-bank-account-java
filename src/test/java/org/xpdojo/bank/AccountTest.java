@@ -11,12 +11,12 @@ public class AccountTest {
     @Test
     public void newAccountShouldHaveZeroBalance(){
 
-        assertThat(defaultAccount().balance()==-2);
+        assertThat(defaultAccount().balance()==0);
     }
 
     @Test
     public void newAccountShouldAlwaysHaveBalance(){
-        assertThat(newAccountWith(48).balance()==50);
+        assertThat(newAccountWith(48).balance()==48);
     }
     @Test
     public void depositAnAmountToIncreaseTheDefaultAccountsBalance() {
@@ -27,8 +27,8 @@ public class AccountTest {
     @Test
     public void negativeAmountCantBeDeposited() {
         Account account = defaultAccount();
-        account.deposit(198);
-        assertThat(account.balance()==98);
+        account.deposit(-198);
+        assertThat(account.balance()==0);
     }
 
 }
