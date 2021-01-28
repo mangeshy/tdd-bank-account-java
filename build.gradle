@@ -11,6 +11,7 @@ apply plugin: 'jacoco'
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2',
             'org.assertj:assertj-core:3.16.1',
+            'org.hamcrest:hamcrest-library:2.1',
             'org.jmock:jmock-junit5:2.11.0',
             'org.mockito:mockito-core:3.3.3'
 
